@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Introdução ao JavaScript</title>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<!--onload - quando carregar o body ele vai chamar essa função e mostrar uma mensagem-->
+<body onload="load()">
+    <!-- tudo que esta dentro do <script> é javaScript
+    <script>
+        //gera um pop up na tela, uma janela com mensagem
+        alert("meu primeiro js");
+    </script> -->
+
+    <!--Essas funções só ião funcionar para esses IDs-->
+    <!--aqui você indica qual função vai ser chamada quando clicar esse botão-->
+    <button type="button" onclick="clicou()">Clique aqui</button>
+    <h3 id="agradecimento" onclick="redirecionar()"></h3>
+    <!-- só de passar o mouse em cima ele mostra o alerta, 
+    troca o texto ou volta ao texto antes
+    Indicar com o THIS, quer dizer que mesmo que eu repita chamando as 
+    funções em outros lugares ele só vai funcionar nesse-->
+    <h3 id="mousemove" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</h3>
+    <h3 id="mousemove2" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</h3>
+    <!-- nessa situação eu não preciso ter id-->
+    <h3 onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</h3>
+
+    <!--onchange-->
+<select onchange="funcaoChange(this)">
+    <option value="1">Valor 1</option>
+    <option value="2">Valor 2</option>
+    <option value="3">Valor 3</option>
+</select>
+
+
+</body>
+
+</html>
